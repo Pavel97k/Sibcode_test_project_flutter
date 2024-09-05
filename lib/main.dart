@@ -13,9 +13,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Test',
       theme: ThemeData(
-        colorScheme: const ColorScheme.light(surface: Colors.lime),
-        useMaterial3: true,
-      ),
+          useMaterial3: true,
+          colorScheme: ColorScheme(
+              brightness: Brightness.light,
+              primary: Colors.orange,
+              onPrimary: Colors.white,
+              secondary: Colors.green.shade200,
+              onSecondary: Colors.white,
+              error: Colors.red.shade300,
+              onError: Colors.white,
+              surface: Colors.white,
+              onSurface: Colors.black)),
       home: const SplashScreen(),
     );
   }
